@@ -2,6 +2,8 @@ require('classlist-polyfill');
 let Promise = require('bluebird');
 let md = require('markdown').markdown.toHTML;
 let workText = require('raw!./work.txt');
+let contactText = require('raw!./contact.txt');
+let finalComments = require('raw!./final_comments.txt');
 let pgpText = require('raw!./pgp.txt');
 let headerHTML = require('raw!./header.html');
 let styleText = [0, 1, 2, 3].map(function(i) { return require('raw!./styles' + i + '.css'); });
@@ -12,7 +14,7 @@ let writeChar = require('./lib/writeChar');
 // Vars that will help us get er done
 let isDev = window.location.hostname === 'localhost';
 let speed = isDev ? 0 : 16;
-let style, styleEl, workEl, pgpEl, skipAnimationEl, pauseEl;
+let style, styleEl, workEl, pgpEl, skipAnimationEl, pauseEl, linksEl;
 let animationSkipped = false, done = false, paused = false;
 let browserPrefix;
 
@@ -27,14 +29,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 async function startAnimation() {
   try {
-    await writeTo(styleEl, styleText[0], 0, speed, true, 1);
-    await writeTo(workEl, workText, 0, speed, false, 1);
-    await writeTo(styleEl, styleText[1], 0, speed, true, 1);
-    createWorkBox();
-    await Promise.delay(1000);
-    await writeTo(styleEl, styleText[2], 0, speed, true, 1);
-    await writeTo(pgpEl, pgpText, 0, speed, false, 32);
-    await writeTo(styleEl, styleText[3], 0, speed, true, 1);
+    //await writeTo(styleEl, styleText[0], 0, speed, true, 1, true);
+    await writeTo(styleEl, contactText, 0, speed, false, 1, false)
+    await writeTo(workEl, workText, 0, speed, false, 1, false);
+    //await writeTo(styleEl, styleText[1], 0, speed, true, 1, false);
+    //createWorkBox();
+    await Promise.delay(500);
+    //await writeTo(styleEl, styleText[2], 0, speed, true, 1, false);
+    //await writeTo(pgpEl, pgpText, 0, speed, false, 1, false);
+    await writeTo(styleEl, finalComments, 0, speed, false, 1, false)
+
+    //await writeTo(styleEl, styleText[3], 0, speed, true, 1, false);
   }
   // Flow control straight from the ghettos of Milwaukee
   catch(e) {
@@ -81,7 +86,7 @@ let endOfSentence = /[\.\?\!]\s$/;
 let comma = /\D[\,]\s$/;
 let endOfBlock = /[^\/]\n\n$/;
 
-async function writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval){
+async function writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval, onlyToStyle){
   if (animationSkipped) {
     // Lol who needs proper flow control
     throw new Error('SKIP IT');
@@ -96,7 +101,7 @@ async function writeTo(el, message, index, interval, mirrorToStyle, charsPerInte
   // If this is going to <style> it's more complex; otherwise, just write.
   if (mirrorToStyle) {
     writeChar(el, chars, style);
-  } else {
+  } else if (!(onlyToStyle)) {
     writeChar.simple(el, chars);
   }
 
@@ -144,8 +149,9 @@ function getEls() {
   styleEl = document.getElementById('style-text');
   workEl = document.getElementById('work-text');
   pgpEl = document.getElementById('pgp-text');
-  skipAnimationEl = document.getElementById('skip-animation');
-  pauseEl = document.getElementById('pause-resume');
+  linksEl = document.getElementById('links');
+  //skipAnimationEl = document.getElementById('skip-animation');
+  //pauseEl = document.getElementById('pause-resume');
 }
 
 //
@@ -166,21 +172,21 @@ function createEventHandlers() {
   });
 
   // Skip anim on click to skipAnimation
-  skipAnimationEl.addEventListener('click', function(e) {
-    e.preventDefault();
-    animationSkipped = true;
-  });
+  // skipAnimationEl.addEventListener('click', function(e) {
+  //   e.preventDefault();
+  //   animationSkipped = true;
+  // });
 
-  pauseEl.addEventListener('click', function(e) {
-    e.preventDefault();
-    if (paused) {
-      pauseEl.textContent = "Pause ||";
-      paused = false;
-    } else {
-      pauseEl.textContent = "Resume >>";
-      paused = true;
-    }
-  });
+  // pauseEl.addEventListener('click', function(e) {
+  //   e.preventDefault();
+  //   if (paused) {
+  //     pauseEl.textContent = "Pause ||";
+  //     paused = false;
+  //   } else {
+  //     pauseEl.textContent = "Resume >>";
+  //     paused = true;
+  //   }
+  // });
 }
 
 //

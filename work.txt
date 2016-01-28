@@ -1,47 +1,80 @@
-STRML.net
-=========
+ ___                   _                 
+| __|_ ___ __  ___ _ _(_)___ _ _  __ ___ 
+| _|\ \ / '_ \/ -_) '_| / -_) ' \/ _/ -_)
+|___/_\_\ .__/\___|_| |_\___|_||_\__\___|
+        |_|                              
 
-Samuel Reed
-CTO, BitMEX (The Bitcoin Mercantile Exchange)
-Frontend / NodeJS Developer
+//////////////////
+CareerBuilder.com, LLC
+//////////////////
 
-Contact
--------
+Software Engineer, August 2014 - Present
+------------------
 
-* sam at bitmex dot com
-* samuel.trace.reed at gmail dot com
-* STRML on irc.freenode.net
+>>> Rapid Response for Careerbuilder's Applicant Tracking System, TalentStream
+# Linux
+# Apache
+# PHP
+# MySQL
 
-Availability
-------------
+>>> Google Analytics Integration for TalentStream
+# JavaScript
+# Google Tag Manager
+# Google Analytics
 
-At this time, I am busy. I am happy to entertain
-proposals for later work but immediate availability
-is scarce.
+>>> API to Provide Data from TalentStream to Internal Applications
+# Symfony framework
+# Doctrine ORM
+# REST
 
-Projects
---------
+>>> Scalability Improvements for TalentStream's Candidate Search
+# Go
+# Docker
+# Quay.io
+# AWS/RDS/MySQL
 
-* www.BitMEX.com
-* www.Securesha.re
-* www.Tixelated.com
-* www.BrightestYoungThings.com
-
-Open Source
------------
-
-* OpenBazaar
-* JSXHint
-* btchip-signing-tools
-* react-grid-layout
-* react-localstorage
-* react-router-component
-* react-resizable
-* react-draggable
-* textFit
-* imgur-to-gfycat
-* backbone.queryRouter
-* backbone.layoutManager
-* mongoose-filter-denormalize
+>>> Simplifying CB's Job Services into Microservices
+# C#
+# VB.NET
+# MySQL
+# Elastic Beanstalk
+# AWS/RDS/Postgres
+# Ruby
+# Sinatra
+# Rails
 
 
+Personal Projects
+------------------
+
+>>> CryptoDating
+# A Web app to transform your phone number into a business card sized puzzle
+#   www.cryptodating.elasticbeanstalk.com
+# Ruby/Sinatra
+
+>>> All I Do Is Win Twitter Contest Bot
+# A twitter bot to automatically enter your account into twitter contests
+#   https://github.com/cmm0004/ALL_I_DO_IS_WIN
+# Python
+# Twitter's API
+# Selenuim
+
+  __    _              _   _          
+| __|__| |_  _ __ __ _| |_(_)___ _ _  
+| _|/ _` | || / _/ _` |  _| / _ \ ' \ 
+|___\__,_|\_,_\__\__,_|\__|_\___/_||_|
+
+
+Pursuing
+------------------
+
+>>> Microsoft Certification, MCSA
+# SQL Server
+
+
+Achieved
+------------------
+
+>>> BFA in Graphic Design
+# Auburn University
+# May 2012

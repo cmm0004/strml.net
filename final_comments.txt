@@ -1,0 +1,12 @@
+>>> I'm Candice, 
+#
+# I live and work in Atlanta, Ga where I spilt my time between
+# work, learning haskell in my local Starbucks, spending time 
+# with friends, and feeding my cat.
+#
+# I work best in Agile Teams of 4-5 and am intelligent, confident, 
+# and assertive in my opinions of software best practices; my design background
+# gives me unique perspective on projects. I can communicate with 
+# both technical and non-technical and am capable of detailed oriented 
+# work while asking the right questions about the bigger picture to
+# keep projects not only on track, but ensuring they meet user need.
