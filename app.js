@@ -1,3 +1,4 @@
+"use strict";
 require('classlist-polyfill');
 let Promise = require('bluebird');
 let md = require('markdown').markdown.toHTML;
