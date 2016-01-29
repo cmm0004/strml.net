@@ -21,6 +21,7 @@
   "dependencies": {
     "babel-runtime": "^5.4.7",
     "bluebird": "^2.9.27",
+    "babel-polyfill": "^6.0.16",
     "classlist-polyfill": "^1.0.1",
     "markdown": "^0.5.0",
     "mouse-wheel": "^1.0.2"
